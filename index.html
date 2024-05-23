@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Text Editor</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="editor-container">
+        <h1>Made by Haseeb Shahbaz</h1>
+        <div class="toolbar">
+            <button onclick="formatText('bold')"><b>B</b></button>
+            <button onclick="formatText('italic')"><i>I</i></button>
+            <button onclick="formatText('underline')"><u>U</u></button>
+            <button onclick="formatText('justifyLeft')"><i class="fas fa-align-left"></i></button>
+            <button onclick="formatText('justifyCenter')"><i class="fas fa-align-center"></i></button>
+            <button onclick="formatText('justifyRight')"><i class="fas fa-align-right"></i></button>
+            <button onclick="formatText('insertUnorderedList')"><i class="fas fa-list-ul"></i></button>
+            <button onclick="formatText('insertOrderedList')"><i class="fas fa-list-ol"></i></button>
+            <select onchange="formatText('fontName', this.value)">
+                <option value="Arial">Arial</option>
+                <option value="Courier New">Courier New</option>
+                <option value="Georgia">Georgia</option>
+                <option value="Times New Roman">Times New Roman</option>
+                <option value="Verdana">Verdana</option>
+            </select>
+            <select onchange="formatText('fontSize', this.value)">
+                <option value="1">10px</option>
+                <option value="2">13px</option>
+                <option value="3">16px</option>
+                <option value="4">18px</option>
+                <option value="5">24px</option>
+                <option value="6">32px</option>
+                <option value="7">48px</option>
+            </select>
+            <input type="color" id="colorPicker" onchange="formatText('foreColor', this.value)">
+        </div>
+        <div id="editor" contenteditable="true" class="editor">
+            Start typing here...
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>

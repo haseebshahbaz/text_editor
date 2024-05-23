@@ -1,0 +1,69 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.editor-container {
+    width: 80%;
+    max-width: 800px;
+    margin: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.toolbar {
+    display: flex;
+    justify-content: center;
+    background: #f7f7f7;
+    border-bottom: 1px solid #ddd;
+    flex-wrap: wrap;
+}
+
+.toolbar button, .toolbar select, .toolbar input[type="color"] {
+    background: none;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    outline: none;
+    margin: 5px;
+}
+
+.toolbar button:hover, .toolbar select:hover, .toolbar input[type="color"]:hover {
+    background: #ddd;
+}
+
+.toolbar select {
+    padding: 5px;
+}
+
+.editor {
+    padding: 20px;
+    min-height: 300px;
+    outline: none;
+}
+
+@media (max-width: 600px) {
+    .editor-container {
+        width: 95%;
+    }
+
+    .toolbar button, .toolbar select, .toolbar input[type="color"] {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
